@@ -15,7 +15,7 @@ public class Juego {
         public synchronized void takeDamage(int daño, String attacker ){
             System.out.println (attacker + " le tira un dardo y hace " + daño + " de daño ");
             vida -= daño;
-            System.out.println(" --- Vida del jugador :"+ vida);
+            System.out.println(" --- Vida de los jugadores :"+ vida);
         }
 
         // Verifica si el jugador sigue vivo
