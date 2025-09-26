@@ -30,6 +30,21 @@ public class GameClient {
         String name = sc.nextLine();
         out.println("NAME:" + name); // enviamos el nombre al servidor
 
+        // Menú de selección de personajes
+        System.out.println("Selecciona tu personaje:");
+        System.out.println("1. Vampiro");
+        System.out.println("2. Mago");
+        System.out.println("3. Caballero");
+        System.out.print("Opción (1-3): ");
+        int opcion = Integer.parseInt(sc.nextLine().trim());
+        String personaje = switch (opcion) {
+            case 1 -> "Vampiro";
+            case 2 -> "Mago";
+            case 3 -> "Caballero";
+            default -> "Caballero";
+        };
+        out.println("CHARACTER:" + personaje); // enviamos el personaje al servidor
+
         // Bucle principal: leer comandos desde la consola y enviarlos al servidor
         while (true) {
             System.out.print("Comando (ATTACK/STATUS/EXIT/HEAL): ");
